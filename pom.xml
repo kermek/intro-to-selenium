@@ -8,12 +8,43 @@
   <artifactId>intro-to-selenium</artifactId>
   <version>1.0-SNAPSHOT</version>
 
-  <name>intro-to-selenium</name>
-  <url>https://github.com/kermek/intro-to-selenium</url>
+    <name>intro-to-selenium</name>
+    <url>https://github.com/kermek/intro-to-selenium</url>
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <java.version>1.8</java.version>
+    <selenium-api.version>3.11.0</selenium-api.version>
+    <selenium-firefox-driver.version>3.11.0</selenium-firefox-driver.version>
+    <selenium-support.version>3.11.0</selenium-support.version>
+    <testng.version>6.14.2</testng.version>
   </properties>
+
+  <dependencies>
+    <dependency>
+      <groupId>org.seleniumhq.selenium</groupId>
+      <artifactId>selenium-api</artifactId>
+      <version>${selenium-api.version}</version>
+      <scope>test</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.testng</groupId>
+      <artifactId>testng</artifactId>
+      <version>${testng.version}</version>
+      <scope>test</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.seleniumhq.selenium</groupId>
+      <artifactId>selenium-firefox-driver</artifactId>
+      <version>${selenium-firefox-driver.version}</version>
+      <scope>test</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.seleniumhq.selenium</groupId>
+      <artifactId>selenium-support</artifactId>
+      <version>${selenium-support.version}</version>
+      <scope>test</scope>
+    </dependency>
+  </dependencies>
 
 </project>
