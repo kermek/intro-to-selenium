@@ -17,7 +17,6 @@ public class Rozetka {
     private WebDriver driver;
     private String baseUrl;
     private WebDriverWait wait;
-    private Actions action;
 
     @BeforeClass(alwaysRun = true)
     public void setUp() {
@@ -25,7 +24,6 @@ public class Rozetka {
         baseUrl = "https://rozetka.com.ua/";
         driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
         wait = new WebDriverWait(driver, 10);
-        action = new Actions(driver);
     }
 
     @Test
@@ -42,8 +40,7 @@ public class Rozetka {
         driver.findElement(By.name("password")).sendKeys("P@ssw0rd");
         driver.findElement(By.xpath("(//button[@type='submit'])[2]")).click();
         wait.until(ExpectedConditions.elementToBeClickable(By.linkText("Закрыть"))).click();
-        action.moveToElement(driver.findElement(By.className("header-user-link"))).click().build().perform();
-        wait.until(ExpectedConditions.elementToBeClickable(By.linkText("Выход"))).click();
+        wait.until(ExpectedConditions.elementToBeClickable(By.id("profile_signout"))).click();
         wait.until(ExpectedConditions.elementToBeClickable(By.linkText("войдите в личный кабинет"))).click();
         driver.findElement(By.name("login")).click();
         driver.findElement(By.name("password")).click();
