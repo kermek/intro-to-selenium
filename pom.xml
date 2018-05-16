@@ -27,7 +27,6 @@
             <groupId>org.seleniumhq.selenium</groupId>
             <artifactId>selenium-api</artifactId>
             <version>${selenium-api.version}</version>
-            <scope>test</scope>
         </dependency>
         <dependency>
             <groupId>org.testng</groupId>
@@ -45,13 +44,11 @@
             <groupId>org.seleniumhq.selenium</groupId>
             <artifactId>selenium-support</artifactId>
             <version>${selenium-support.version}</version>
-            <scope>test</scope>
         </dependency>
         <dependency>
             <groupId>com.codeborne</groupId>
             <artifactId>selenide</artifactId>
             <version>${selenide.version}</version>
-            <scope>test</scope>
         </dependency>
     </dependencies>
 
